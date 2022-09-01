@@ -1,0 +1,20 @@
+
+<%= form_with url: "/test", method: :post, data:{turbo: false}    do |form| %>
+  <div style = "display:flex; flex-direction: row;">
+     <div><%= form.label :x, "Subject" %></div>
+     <div style = "margin-left: 7rem;"><%= form.label :y, "Grade" %></div>
+  </div>
+  <div>
+     <%= form.text_field :sub1 %>           
+     <%= form.text_field :score1 %>
+  </div>
+  <div>
+     <%= form.text_field :sub2 %>           
+     <%= form.text_field :score2 %>
+  </div>
+  <div>
+     <%= form.text_field :sub3 %>           
+     <%= form.text_field :score3 %>
+  </div>
+  <%= form.submit "Submit" %>
+<% end %>
